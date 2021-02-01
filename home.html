@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Home page: shows basic skills in coding, languages, soft skills. -->
+		<title>Home</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">		<!-- Oswald font family -->
+		<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">		<!-- Anton font family (skills headers) -->
+		<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">	<!-- staatliches font family (navigation bar) -->
+		<link href="https://fonts.googleapis.com/css2?family=Volkhov&display=swap" rel="stylesheet">	<!-- Volkhov font family for longer text (e.g. hobby page) -->
+	</head>
+	<body>
+		<header>
+			<div class="topnav">	<!-- navigation header -->
+				<a href="./home.html" class="active nav-link">Home</a>
+				<a href="./hobby.html" class="nav-link">Hobby</a>
+				<a href="./projects.html" class="nav-link">Progetti</a>
+				<a href="./cv.html" class="nav-link">Curriculum</a>
+				<a href="./contact.html" class="nav-link">Contatti</a>
+			</div>
+		</header>
+		<main class="main-content">
+			<h1 class="page-header">Skills</h1>
+
+			<div class="skills-container">	<!-- Flexbox container; every child div is a skill set; more info is given on mouse hover -->
+
+				<div class="skill-set-container">	<!-- coding -->
+					<div id="coding-skill-bg">&lt&#47&gt</div>
+					<div class="overlay bg-1">
+						<div class="skill-name">Programmazione</div>
+						<ul>
+							<li>HTML e CSS</li>
+							<li>Java e JavaScript</li>
+							<li>Basi di Java for Android</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="skill-set-container">	<!-- languages -->
+					<img src="images/language.svg" class="skill-img" alt="language">
+					<div class="overlay bg-2">
+						<div class="skill-name">Lingue</div>
+						<ul>
+							<li>Italiano madrelingua</li>
+							<li>Ottimo livello di Inglese (C1 certificato)</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="skill-set-container">	<!--programs and other -->
+					<img src="images/programs.svg" class="skill-img" alt="programs">
+					<div class="overlay bg-3">
+						<div class="skill-name">Tecnologia</div>
+						<ul>
+							<li>Conoscenza base di IDE</li>
+							<li>Esperienza nell'editing amatoriale di immagini, sia in formati raster che vettoriali</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="skill-set-container">	<!-- soft skills -->
+					<img src="images/soft.svg" class="skill-img" alt="soft skills">
+					<div class="overlay bg-4">
+						<div class="skill-name">Soft skills</div>
+						<ul>
+							<li>Ottime capacità di pensiero razionale e problem solving</li>
+							<li>Buona propensione al lavoro in team</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer> <!-- footer; since pages are short, just a "to top" or "to home" link and some sort of signature -->
+			<a href="./home.html">Torna alla home</a>
+			<div id="signature">Realizzato da Francesco Cremon</div>
+		</footer>
+	</body>
+</html>

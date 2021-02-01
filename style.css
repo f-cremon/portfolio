@@ -1,0 +1,276 @@
+body {
+	margin: 0px;
+	height: 100vh;
+	min-height: 100%;
+}
+
+header {
+	background-color: rgb(100, 100, 100);
+	min-height: 5vw;
+}
+
+.topnav {
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	min-width: 400px;
+	height: 100%;
+	position: relative;
+	left: 25%;
+}
+
+.nav-link {
+	text-decoration: none;
+	text-align: center;
+	justify-text: center;
+	box-sizing: border-box;
+	width: 15%;
+	height: 100%;
+	align-self: center;
+	padding: 1vh 0;
+	font-family: staatliches, sans-serif;
+	font-size: 1.5vw;
+	color: white;
+	line-height: 4vw;
+}
+
+.nav-link:visited {
+	color: white;
+}
+
+.nav-link:hover {
+	background-color: silver;
+	transition: background-color linear 0.2s;
+}
+
+.nav-link.active {
+	background-color: white;
+	color: black;
+}
+
+
+
+footer {
+	height: 150px;
+	background-color: #101010;
+	font-family: sans-serif;
+	font-family: sans-serif;
+	width: 100%;
+	box-sizing: border-box;
+	position: relative;
+	margin-top: 150px;
+	padding-top: 50px;
+	text-align: center;
+}
+
+footer a , footer a:visited {
+	text-decoration: none;
+	text-decoration-style: : none;
+	font-size: 20px;
+	color: white;
+	margin-top: 150px;
+}
+
+footer div {
+	font-size: 12px;
+	color: white;
+}
+
+
+.page-header {
+	font-family: Oswald, sans-serif;
+	font-size: 3vw;
+	text-align: center;
+	margin-top: 5vh;
+	margin-bottom: 3vh;
+}
+
+.skills-container {
+	min-width: 400px;
+	max-width: 2000px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	row-gap: 50px;
+	margin: 5% 25% 10% 25%;
+}
+
+.skill-set-container {
+	flex: 0 1 350px;
+	position: relative;
+}
+
+.skill-img {
+	width: 100%;
+	display: block;
+}
+
+#coding-skill-bg {
+	color: #aaaaaa;
+	font-size: 13vw;
+	font-weight: bold;
+	text-align: center;
+}
+
+.overlay {
+	background-color: teal;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-family: oswald, sans-serif;
+	padding: 10%;
+	box-sizing: border-box;
+	font-size: 1.4vw;
+	border-radius: 30px;
+}
+
+.bg-1 {
+	background-color: #45a2ff;
+}
+
+.bg-2 {
+	background-color: #8BC34A;
+}
+
+.bg-3 {
+	background-color: #8f68fc;
+}
+
+.bg-4 {
+	background-color: #FF9800;
+}
+
+.skill-set-container:hover .skill-img {
+	opacity: 0;
+	transition: opacity ease-in 0.3s;
+}
+.skill-set-container:hover .overlay {
+	opacity: 1;
+	transition: opacity ease-in 0.3s;
+}
+
+.skill-name {
+	font-family: anton, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#signature {
+	margin-top: 30px;
+}
+
+
+.main-content {
+	min-height: 60%;
+}
+
+
+.focus-content {
+	margin: 50px 20% 0 20%;
+	font-family: volkhov, serif;
+	font-size: 1.2vw;
+	line-height: 1.8vw;
+}
+
+.focus-content table {
+	font-family: Oswald, sans-serif;
+	font-size: 1.3vw;
+	width: 70%;
+	border-collapse: collapse;
+	margin: auto;
+}
+
+.focus-content tr {
+	height: 3vw;
+}
+
+.focus-content tr:nth-child(odd) {
+	background-color: rgb(230, 230, 230);
+}
+
+.focus-content td  a {
+	text-decoration: none;
+	color: slategrey;
+}
+
+.projects-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin: 5% 10%;
+}
+
+.project {
+	flex: 1 1 250px;
+	font-family: volkhov, serif;
+	font-size: 1.2vw;
+}
+
+.project a {
+	text-decoration: none;
+	
+}
+
+
+.snippet {
+	background-color: #e8e8e8;
+	font-family: monospace;
+	font-size: 90%;
+	margin: 0 5%;
+}
+
+
+
+/**************************************************************** TIC TAC TOE GAME *****************************************************************/
+
+
+#sweeper_container {
+	margin: 10%;
+	text-align: center;
+}
+
+.board-row:after {
+  	clear: both;
+  	content: "";
+  	display: table;
+}
+
+.status {
+  	margin-bottom: 10px;
+  	font-family: Anton, sans-serif;
+  	font-size: 2vw;
+}
+
+.square {
+  	background: #f2f2f2;
+  	border: 1px solid #999;
+  	float: left;
+  	font-size: 3vw;
+  	font-weight: bold;
+  	height: 4vw;
+  	margin-right: -1px;
+  	margin-top: -1px;
+  	padding: 0;
+  	text-align: center;
+  	width: 4vw;
+}
+
+.square:hover {
+  	background: #ddd;
+}
+
+.game {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+
+

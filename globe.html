@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Contact: give basic infos such as emal or phone. -->
+		<title>Contatti</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">		<!-- Oswald font family -->
+		<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">		<!-- Anton font family (skills headers) -->
+		<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">	<!-- staatliches font family (navigation bar) -->
+		<link href="https://fonts.googleapis.com/css2?family=Volkhov&display=swap" rel="stylesheet">	<!-- Volkhov font family for longer text (e.g. hobby page) -->
+	</head>
+	<body>
+		<header>
+			<div class="topnav">	<!-- navigation header -->
+				<a href="./home.html" class="nav-link">Home</a>
+				<a href="./hobby.html" class="nav-link">Hobby</a>
+				<a href="./projects.html" class="nav-link">Progetti</a>
+				<a href="./cv.html" class="nav-link">Curriculum</a>
+				<a href="./contact.html" class="nav-link">Contatti</a>
+			</div>
+		</header>
+		<main class="main-content">
+			<h1 class="page-header">Mappamondo</h1>
+			<div class="focus-content">
+				<img src="images/complete_v5_omg.svg" class="rotating-globe">
+				<p>
+					Questo file SVG è una rappresentazione in proiezione ortografica della Terra. È stato costruito a partire dai dati di NaturalEarth, a cui sono state applicate delle trasformazioni attraverso il pacchetto Cartopy per Python. Nell'immagine ci sono in totale trentasei frame, uno ogni 10° di longitudine, che si alternano con una transizione CSS.
+				</p>
+			</div>
+			<div class="focus-content">
+				<p>
+					Questo SVG è stato creato in origine per <a href="https://www.jetpunk.com/user-quizzes/318670/countries-of-the-world-in-a-better-spinning-globe" target="_blank">un quiz</a> sui vari Stati.
+				</p>
+				<p>Di seguito una parte del codice della transizione:</p>
+			</div>
+			<div class="focus-content">
+				<p>Il frame numero 35:</p>
+				<div class="snippet">
+					<code>
+						.f35 {<br>
+							<code style="margin-left:5%;">animation: 36s linear 0s infinite anima;</code><br>
+						}<br>
+					</code>
+				</div>
+				<p>L'animazione "anima", applicata a tutti i frame:</p>
+				<div class="snippet">
+					<code>
+						@keyframes anima {<br>
+						<code style="margin-left:5%;">0% {visibility: hidden}</code><br>
+						<code style="margin-left:5%;">97.22% {visibility: hidden}</code><br>
+						<code style="margin-left:5%;">97.23% {visibility: visible}</code><br>
+						<code style="margin-left:5%;">100% {visibility: visible}</code><br>
+						}<br>
+					</code>
+				</div>
+			</div>
+		</main>
+		<footer> <!-- footer; since pages are short, just a "to top" or "to home" link and some sort of signature -->
+			<a href="./home.html">Torna alla home</a>
+			<div id="signature">Realizzato da Francesco Cremon</div>
+		</footer>
+	</body>
+</html>
