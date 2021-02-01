@@ -2,7 +2,6 @@
 
 /**
   TODO: -maybe have zero squares show blank instead of the literal zero
-        -having bomb squares show up as bombs would be a plus
         -maybe ask for input on the size of the board, and automate the
           creation of the squares and arrays based on that number
           instead of hard-coding it in 
@@ -39,9 +38,9 @@ class Board extends React.Component {
   /**
     Board is the actual game board, made up of Squares. It holds all the game information, which is to say
     a squares array, which holds the bomb positions and the number of bombs in the proximity of a square,
-    and a squaresShow array, which is just an array of Booleans taht indicate which squares have been
+    and a squaresShow array, which is just an array of Booleans that indicate which squares have been
     revealed and which are still hidden.
-    It has a handleClick() function which is passed to each Square when constructed,
+    It has a handleClick() function which is passed to each Square when constructed.
   */
 
   constructor(props) {
@@ -77,7 +76,7 @@ class Board extends React.Component {
     /**
       If we hit a square with no adjacent bombs, we want to automatically uncover all the adjacent squares;
       this has to happen for every "zero" square, so if there's a big patch of 0s everything must show at once.
-      To implement this, we just use the look functions and call handleClick again.
+      To implement this, we just use the look functions and call the handleClick workhorse.
       It's very important to also check in squaresShow if the square has already been uncovered and to update the
       squareShow within the Board's state;
       if we don't the function will loop 
@@ -95,7 +94,7 @@ class Board extends React.Component {
     /**
       This function returns a new Square, passing the handleClick function as its onClick property, and
       giving it a value depending on whether the square is uncovered: the value stored in the squares array
-      if it, or a question mark if the square is still hidden
+      if it is, or a question mark if the square is still hidden
     */
     return (
       e(Square, {
@@ -314,7 +313,8 @@ function calculateWinner(squares, squaresShow) {
     The calculateWinner function compares the number of squares that are showing and the number of squares that are bombs and
     returns "Won" or "Lost" based on the outcome of the game, or null if the game is not over yet.
     If the number of squares that are showing is equal to or greater than the number of squares that are NOT bombs, it means
-    the game is over: either the player uncovered all the safe squares (and won) or the player chose a bomb square and lost.
+    the game is over: either the player uncovered all the safe squares (and won) or the player chose a bomb square and lost (since 
+    uncovering a bomb automatically reveals all squares).
     To see if the game was won or lost we check if the number of squares showing is exactly the same as the number of safe squares,
     in which case the game was won.
   */
@@ -381,7 +381,7 @@ function genBoard(numSquares) {
   let gap = Math.sqrt(firstBoard.length);
   for (let j = 0; j < firstBoard.length; j++) {
 
-    // activates when we have a bomb ("X")
+    // activates when we have a bomb
     if (firstBoard[j] === "💣") {
       //check if it's at least on the second row, if so add 1 to the square on top (if it's not a bomb)
       if (lookUp(j, gap) && firstBoard[j - gap] !== "💣") {
